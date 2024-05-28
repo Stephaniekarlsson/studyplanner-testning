@@ -4,8 +4,14 @@ function splitTodosIntoDays(todos) {
 	const mo = todos.filter(t => t.day === 'mo')
 	const ti = todos.filter(t => t.day === 'ti')
 	const on = todos.filter(t => t.day === 'on')
+	const to = todos.filter(t => t.day === 'to')
+	const fre = todos.filter(t => t.day === 'fre')
+	const lö = todos.filter(t => t.day === 'lö')
+	const sön = todos.filter(t => t.day === 'sön')
 
-	return [mo, ti, on]
+
+
+	return [mo, ti, on, to, fre, lö, sön]
 }
 
 // Tips! Du kan få användning för funktioner som:

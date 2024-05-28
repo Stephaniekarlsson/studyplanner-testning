@@ -10,9 +10,10 @@ const Main = () => {
 
 	return (
 		<main>
-			<div className="day-view">
-				{days.map(d => (
-					<Day day={d} key={1 /* TODO kom på något sätt att ge varje dag en unik "key" */} />
+			<div className="day-view"
+			data-cy="day-view">
+				{days.map((d, index) => (
+					<Day day={d} key={index} dayIndex={index} />
 				))}
 			</div>
 

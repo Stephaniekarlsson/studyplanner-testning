@@ -1,9 +1,20 @@
 // TODO: hämta dagens datum från store
-const Footer = () => (
+import { useStore } from "../data/store"
+
+
+const Footer = () => {
+
+	const todayName = useStore(state => state.todayName)
+
+ return (
 	<footer>
-		<p> Idag är det: ?????? </p>
+		<p data-cy="today-name" > Idag är det: {todayName} </p>
 		<p> Studieguide | 2024 </p>
 	</footer>
-)
+
+ )
+
+}
+
 
 export default Footer

@@ -1,24 +1,23 @@
-import Item from "./Item"
+import Item from "./Item";
 
-// OBS, det är tillåtet att lägga till flera props
-// När du testar, rendera komponenten med olika värden på props
-const Day = ({ day }) => {
-	// TODO: implement rest of week
-	const dayName = 'Måndag'
+const Day = ({ day, dayIndex }) => {
+	const dayNames = ["Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"];
 
 	return (
-		<div className="day">
-			<h2> {dayName} </h2>
-
-			{day.map(item => (
-				<Item key={item.id} item={item} />
+		<div className="day"
+		data-cy="day">
+			<h2 data-cy="weekday-header">{dayNames[dayIndex]}</h2>
+			{day.map((item) => (
+				<div key={item.id}>
+					<Item item={item} />
+				</div>
 			))}
-
 			<div className="controls">
-				<button> Ny uppgift </button>
+				<button
+				data-cy="btn">Ny uppgift</button>
 			</div>
 		</div>
-	)
-}
+	);
+};
 
-export default Day
+export default Day;
