@@ -35,7 +35,8 @@ const Item = ({ item }) => {
   };
 
   return (
-    <div className="item">
+    <div className="item"
+    data-cy="item">
       <input
         type="checkbox"
         data-cy="checkbox"

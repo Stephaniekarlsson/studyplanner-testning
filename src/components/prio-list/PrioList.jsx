@@ -15,12 +15,14 @@ const PrioList = () => {
             <div className="list-container">
                 <input
                     type="search"
+                    data-cy="search-input"
                     placeholder="Filtrera uppgifter"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
 
-                <div className="prio-items">
+                <div className="prio-items"
+                data-cy="prio-items">
                     {items.map((item, index) => (
                         <PrioItem key={item.id} item={item} num={index + 1} />
                     ))}

@@ -27,10 +27,7 @@ describe("<Item />", () => {
   });
 
   it("1c. Should be able to change text", () => {
-    // Klicka på pennikonen för att aktivera redigeringsläget
     cy.get('[data-cy="edit-icon"]').click();
-
-    // Hitta inputfältet för text och skriv den nya texten
     cy.get('[data-cy="input-field"]').clear().type(newText);
   });
 
